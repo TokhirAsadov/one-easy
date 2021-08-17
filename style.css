@@ -1,0 +1,104 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style-type: none;
+  text-decoration: none;
+}
+
+body {
+  overflow: hidden;
+}
+
+section {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to bottom, #ff4f86, #dff1ff);
+}
+section::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 50%;
+  bottom: 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(5px);
+  z-index: 2;
+}
+section .color {
+  filter: blur(150px);
+}
+section .color:nth-child(1) {
+  width: 600px;
+  height: 600px;
+  position: absolute;
+  top: -150px;
+  left: 200px;
+  background-color: #ff359b;
+}
+section .color:nth-child(2) {
+  width: 500px;
+  height: 500px;
+  position: absolute;
+  bottom: -150px;
+  right: 100px;
+  background-color: #00d2ff;
+}
+section .color:nth-child(3) {
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  bottom: 50px;
+  left: 100px;
+  background-color: #ff0;
+}
+section ul {
+  display: flex;
+  position: relative;
+  z-index: 2;
+}
+section ul li {
+  position: relative;
+  margin: 10px;
+}
+section ul li a {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  color: #fff;
+  font-size: 2em;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(2px);
+  transition: 0.5s;
+  overflow: hidden;
+}
+section ul li a:hover {
+  transform: translateY(-20px);
+}
+section ul li a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.5);
+  transform: skewX(45deg) translateX(150px);
+  transition: 0.5s;
+}
+section ul li a:hover::before {
+  transform: skewX(45deg) translateX(-150px);
+}
+
+/*# sourceMappingURL=style.css.map */
